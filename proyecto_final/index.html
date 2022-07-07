@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recetario Antonella</title>
+        <!--Boostrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- HOJA DE ESTILOS CSS-->
+        <link rel="stylesheet" href="css/estilos.css" type="text/css">
+        <!-- JQUERY-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/c6977e1ed1.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main>
+            <!-- BOTON DE IR ARRIBA Jquery --> 
+            <a class="ir-arriba" javascript:void(0) title="volver arriba">
+                <span class="fa-stack">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+             <!--SECCION DEL MENU-->
+            <header>
+                <nav class="nav">
+                    <div class="nav-container">
+                        <img src="public/img/icono.png" class="icono" alt="icono">
+                        <h4 class="name-icon">Recetario Antonella</h4>
+                        <label for="menu" class="nav-label">
+                            <img src="public/img/menu-hamburguesa.png" class="nav-img" alt="menu-hamburguesa">
+                        </label>
+                        <input type="checkbox" id="menu" class="nav-input">
+                        <div class="nav-menu">
+                            <a href="#galeria_de_comidas" class="nav-item">Galeria de Comidas</a>
+                            <a href="#acerca_de" class="nav-item">Acerca de</a>
+                            <a href="#recetas" class="nav-item">Recetas</a>
+                            <a href="#contacto" class="nav-item">Contacto</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!--CONTENEDOR DEL BANNER Y LA GALERIA-->
+            <img src="public/img/banner.jpg" class="img-fluid" id="foto-banner" alt="foto-banner">
+            <div class="galeria" id="galeria_de_comidas">
+                <h3>Galeria de Comidas</h3>
+                <div class="contenedor-imagenes">
+                    <div class="imagen">
+                        <img src="public/img/imagen-1.jpg" alt="imagen comida">
+                        <div class="overlay">
+                            <h5>Pastas</h5>
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="public/img/imagen-2.jpg" alt="imagen comida">
+                        <div class="overlay">
+                            <h5>Hamburguesas</h5>
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="public/img/imagen-3.jpg" alt="imagen comida">
+                        <div class="overlay">
+                            <h5>Smoothies</h5>
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="public/img/imagen-4.jpg" alt="imagen comida">
+                        <div class="overlay">
+                            <h5>Postres</h5>
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="public/img/imagen-5.jpg" alt="imagen comida">
+                        <div class="overlay">
+                            <h5>Desayunos</h5>
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="public/img/imagen-6.jpg" alt="imagen comida">
+                        <div class="overlay">
+                            <h5>Pescados</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--MARGEN-->
+            <div class="margen" id="acerca_de"></div>
+            <!--SECCIÓN SOBRE MI-->
+            <div class="content-2">
+                <h4>Acerca de</h4>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <p class="parrafo">
+                            Bienvenido a este espacio culinario que te ayudara a sacar ese chef que llevas dentro. Con mis recetas comprobaras que aunque se te queme el agua podes cocinar, no exagero. Te simplifico todo, te comparto todos
+                            mis tips y te enseño a cocina como si estuvieramos juntos en la cocina hablando como amigos.
+                        </p>
+                    </div>
+                    <div class="col-5">
+                        <img src="public/img/imagen-cocina.jpg" id="imagen-contenedor" alt="imagen cocina">
+                    </div>
+                </div>
+            </div>
+            <!--SECCIÓN DE LAS RECETAS -->
+            <!-- Titulo-->
+            <div class="content">
+                <h4>Recetas</h4>
+            </div>
+            <!-- TARJETA 1-->
+            <div class="container-cards" id="recetas">
+                <div class="card">
+                    <div class="cover-card">
+                        <img src="public/img/espaguetis-a-la-crema.jpg" alt="comida">
+                    </div>
+                    <h2>Spaguettis a la crema</h2>
+                    <p>Preparación :</p>
+                    <p>En una sartén caliente derrite la manteca, saltea el spaghetti cocido con el ajo y la pimienta. Agrega crema y calienta durante 5 minutos moviendo constantemente, retirar del fuego y servir.</p>
+                    <hr />
+                </div>
+                <!-- TARJETA 2-->
+                <div class="card">
+                    <div class="cover-card">
+                        <img src="public/img/Hamburguesa.jpg" alt="comida">
+                    </div>
+                    <h2>Hamburguesa</h2>
+                    <p>Preparación :</p>
+                    <p>¡Es muy facil! Primero mezclar bien la carne picada con el chorizo, Agregar la cebolla y el ajo bien picado, el pimentón y e perejil también bien picado.</p>
+                    <p>Una vez integrado esto, agregar los dos huevos y unir bien con las manos. Se le puede agregar pan rallado, hacer las hamburguesas caseras.</p>
+                    <hr />
+                </div>
+                <!-- TARJETA 3-->
+                <div class="card">
+                    <div class="cover-card">
+                        <img src="public/img/brownie.jpg" alt="postre">
+                    </div>
+                    <h2>Brownie</h2>
+                    <p>Preparación :</p>
+                    <p>
+                        Para comenzar con nuestra receta de brownies de chocolate, vamos a colocar la manteca y el chocolate picados en una sartén, y llevarlos a fuego bien bajo. Lo tapamos y vamos a dejarlo por unos 5 minutos sin tocar.
+                        Confíen! Ahora retirar del fuego y revolver los ingredientes hasta que esté todo derretido e integrado. A parte vamos a batir los 2 huevos con el azúcar hasta que queden bien blancos, esto es clave para que el
+                        brownie casero quede bien húmedo.
+                    </p>
+                    <p>
+                        Agregar el chocolate derretido y batir hasta que esté integrado. Sumar las nueces en pedazos grandes o como más les guste. Sumar el harina 0000 tamizada en dos partes e integrar todo como se ve en el video. Es
+                        importante batir fuerte antes de pasar el brownie de chocolate al molde. Colocar en una placa y cocinar al horno fuerte (200-220°) por 20 minutos.
+                    </p>
+                    <hr />
+                </div>
+                <!-- TARJETA 4 -->
+                <div class="card">
+                    <div class="cover-card">
+                        <img src="public/img/smoothies.jpg" alt="bebida">
+                    </div>
+                    <h2>Smoothie de Pepino y Manzana verde</h2>
+                    <p>Preparación :</p>
+                    <p>
+                        Pela y corta el pepino en rodajas. Pela la manzana y trocéala, Pon la manzana y el pepino troceados en la batidora, con un poco de agua fría si queda muy espeso. Añade el jengibre rallado y bate hasta obtener una
+                        textura fina, Pica un poco de hielo y añádelo para refrescar y servirlo bien frío.
+                    </p>
+                    <hr />
+                </div>
+            </div>
+            <div class="margen"></div>
+            <!--SECCION DEL FOOTER -->
+            <div class="content-3">
+                <h4>Contacto</h4>
+            </div>
+            <footer>
+                <div class="container-footer">
+                    <div class="box-footer">
+                        <div class="terms">
+                            <p>Si desea que le envie recetas, o desea ponerse en contacto conmigo, puede hacerlo a traves de mis redes sociales. O puede ingresar a mi canal de youtube donde subo todas mis recetas.</p>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <h2>Redes Sociales</h2>
+                        <a href="#"> <i class="fab fa-youtube-square"></i> Youtube</a>
+                        <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+                    </div>
+                </div>
+                <div class="box-copyright">
+                    <hr />
+                    <p>Todos los derechos reservados © 2021 <b>Antonella</b></p>
+                </div>
+            </footer>
+        </main>
+        <!--JAVASCRIPT-->
+        <script src="./javascript/funciones.js"></script>
+    </body>
+</html>

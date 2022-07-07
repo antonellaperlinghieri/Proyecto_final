@@ -1,0 +1,440 @@
+/* GOOGLE FONTS IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;1,300&family=Lato:ital@1&family=Montserrat:ital@1&family=Open+Sans:ital,wght@0,300;0,400;1,500;1,800&family=Oswald:wght@300&family=Oxygen&family=Raleway:ital,wght@0,100;1,300&family=Roboto:ital,wght@0,300;1,300;1,400&display=swap");
+/* GENERALES */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+/* ESTILOS BOTON IR ARRIBA */
+.ir-arriba {
+    display: none;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN Y BANNER*/
+header {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(231, 231, 231);
+    z-index: 10;
+}
+
+header nav {
+    justify-content: center;
+    margin-top: 0;
+}
+
+.nav {
+    background: rgb(235, 232, 232);
+    height: 70px;
+    color: rgb(20, 20, 20);
+}
+.nav-img {
+    width: 70%;
+}
+
+.nav-menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+.icono {
+    width: 50px;
+}
+.name-icon {
+    float: left;
+    margin-right: 47%;
+    margin-top: 10px;
+}
+.nav-item {
+    color: rgb(37, 36, 36);
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav-item::after {
+    content: "";
+    display: block;
+    background: rgba(162, 129, 189, 0.616);
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path 0.3s;
+}
+
+.nav-item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    text-decoration: none;
+}
+.nav-input:checked + .nav-menu {
+    background: rgb(255, 255, 255);
+}
+
+.nav-label,
+.nav-input {
+    display: none;
+}
+
+.nav-container {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MEDIA QUERY MENU */
+
+@media (max-width: 1500px) {
+    .nav-label {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        bottom: 0;
+        background: rgb(255, 250, 250);
+        width: 50%;
+        left: 0;
+        display: flex;
+        justify-content:space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+    .nav-input:checked + .nav-menu {
+        clip-path: circle(100% at center);
+    }
+}
+/* BANNER */
+#foto-banner {   
+    width: 100%;  
+}
+/*ESTILOS DE LA GALERIA*/
+.galeria {
+    font-family: "Montserrat", sans-serif;
+}
+.galeria h3 {
+    text-align: center;
+    margin: 20px 0 15px 0;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+
+.contenedor-imagenes .imagen {
+    width: 32%;
+    position: relative;
+    height: 200px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(162, 129, 189, 0.616);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.overlay h5 {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay {
+    height: 100%;
+    cursor: pointer;
+}
+
+/*MEDIA QUERIES GALERIA */
+@media screen and (max-width: 1000px) {
+    .contenedor-imagenes {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contenedor-imagenes {
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h3 {
+        font-size: 22px;
+    }
+    .contenedor-imagenes {
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen {
+        width: 80%;
+    }
+}
+
+/* ESTILOS SECCION SOBRE MI */
+
+.parrafo {
+    position:relative;
+    font-style: oblique;
+    padding-top: 30%;
+    
+}
+
+#imagen-contenedor {
+    position: relative;
+    width: 140%;
+    right: 25%;
+    margin: 30%;
+}
+
+.margen {
+    margin-top:20px;
+}
+.content-2 {
+    position: relative;
+    left: 30%;
+    margin-bottom: 100px;
+}
+
+.content-2 h4 {
+    margin-top: 60px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+}
+
+.content-2 h4:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(139, 104, 173, 0.616);
+}
+/* ESTILOS SECCIÓN RECETAS */
+
+.content {
+    position: relative;
+    text-align: center;
+    left: 50%;
+}
+
+.content h4 {
+    margin-top: 60px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    font-size: 4.5em;
+}
+
+.content h4:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(139, 104, 173, 0.616);
+}
+
+/* CONTENEDOR DE LAS TARJETAS SECCIÓN RECETAS */
+.container-cards {
+    width: 110%;
+    margin-top: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 20px 20px 50px rgba(29, 29, 29, 0.5);
+    border-left: 1px solid rgba(29, 29, 29, 0.5);
+    border-top: 1px solid rgba(29, 29, 29, 0.5);
+    border-radius: 15px;
+    transition: all 300ms;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover .cover-card img {
+    transform: scale(1.1);
+}
+
+.cover-card {
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cover-card img {
+    width: 110%;
+    transition: all 300ms;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: rgb(12, 11, 11);
+}
+
+.card p {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(12, 11, 11);
+    letter-spacing: 0.5px;
+}
+
+.card hr {
+    margin-top: 30px;
+    border: none;
+    height: 0.2px;
+    background: rgb(12, 11, 11);
+}
+
+@media screen and (max-width: 1200px) {
+    .container-cards {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+/* FOOTER */
+.content-3{
+    position: relative;
+    left: 50%;
+    margin-bottom: 200px;
+}
+
+.content-3 h4 {
+    margin-top: 100px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+}
+
+.content-3 h4:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(139, 104, 173, 0.616);
+}
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url(../public/img/background-footer.svg);
+    background-size: cover;
+}
+
+.container-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.box-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+
+.box-footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: rgb(122,122,122);
+    font-size: 18px;
+}
+
+.box-footer h2{
+    margin-bottom: 30px;
+    color: rgb(52, 52, 52);
+    font-weight: 700;
+}
+
+.box-footer a{
+    margin-top: 10px;
+    color: rgb(122,122,122);
+    font-weight: 600;
+}
+
+.box-footer a:hover{
+    opacity: 0.8;
+}
+
+.box-footer a .fab{
+    font-size: 20px;
+}
+
+.box-copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box-copyright p{
+    margin-top: 20px;
+    color: rgb(122,122,122);
+}
+
+.box-copyright hr{
+    border: none;
+    height: 1px;
+    background-color: rgb(122,122,122);
+}
